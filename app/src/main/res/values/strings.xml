@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">daggerDemo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="injected_text">Injected text!</string>
+    <string name="title_activity_repositories_list">RepositoriesListActivity</string>
+</resources>
