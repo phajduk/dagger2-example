@@ -23,12 +23,12 @@ android {
             storePassword 'release'
         }
     }
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
     defaultConfig {
         applicationId "net.pawelhajduk.daggerdemo"
         minSdkVersion 15
-        targetSdkVersion 21
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
     }
@@ -38,20 +38,23 @@ android {
             signingConfig signingConfigs.release
         }
     }
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
 
 }
 
 dependencies {
     provided 'javax.annotation:jsr250-api:1.0'
-    apt "com.google.dagger:dagger-compiler:2.0-SNAPSHOT"
+    compile 'com.google.dagger:dagger-compiler:2.0.1'
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.google.dagger:dagger:2.0-SNAPSHOT'
     compile 'com.jakewharton:butterknife:6.1.0'
     compile 'com.squareup.retrofit:retrofit:1.9.0'
     compile 'com.squareup.retrofit:retrofit-mock:1.9.0'
     compile 'com.squareup.okhttp:okhttp:2.0.0'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
-    compile 'io.reactivex:rxjava:1.0.4'
-    compile 'io.reactivex:rxandroid:0.23.0'
+    compile 'io.reactivex:rxjava:1.0.10'
+    compile 'io.reactivex:rxandroid:0.24.0'
 }
