@@ -15,7 +15,7 @@ public interface DaggerDemoComponent extends DaggerDemoGraph {
         } // No instances.
 
         public static DaggerDemoComponent init(DaggerDemoApplication app) {
-            return Dagger_DaggerDemoComponent.builder()
+            return DaggerDaggerDemoComponent.builder()
                                              .mainModule(new MainModule(app))
                                              .build();
         }
