@@ -41,6 +41,9 @@ android {
     packagingOptions {
         exclude 'META-INF/services/javax.annotation.processing.Processor'
     }
+    lintOptions {
+        abortOnError false
+    }
 
 }
 
