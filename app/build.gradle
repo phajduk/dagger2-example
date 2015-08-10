@@ -10,9 +10,6 @@ buildscript {
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
     }
 }
-repositories {
-    maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
-}
 
 android {
     signingConfigs {
@@ -50,9 +47,9 @@ android {
 dependencies {
     provided 'javax.annotation:jsr250-api:1.0'
     compile 'com.google.dagger:dagger-compiler:2.0.1'
+    compile 'com.google.dagger:dagger:2.0.1'
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:22.2.0'
-    compile 'com.google.dagger:dagger:2.0-SNAPSHOT'
     compile 'com.jakewharton:butterknife:6.1.0'
     compile 'com.squareup.retrofit:retrofit:1.9.0'
     compile 'com.squareup.retrofit:retrofit-mock:1.9.0'
