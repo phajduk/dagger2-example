@@ -16,7 +16,7 @@ public class MockGitHubService implements GitHubService {
     }
 
     @Override
-    public Observable<List<Repository>> listRepos(@Path("org") String org) {
+    public Observable<List<Repository>> listRepos(@Path("org") String user) {
         return Observable.just(Arrays.asList(
                 createMockRepository("Mock repository 1"),
                 createMockRepository("Mock repository 2"),

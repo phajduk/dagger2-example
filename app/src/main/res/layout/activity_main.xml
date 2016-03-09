@@ -23,7 +23,7 @@
 
     <Button
         android:id="@+id/goToRepositoriesList"
-        android:text="Repositories list for Future Processing"
+        android:text="Repositories list for phajduk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>

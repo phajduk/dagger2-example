@@ -10,7 +10,7 @@ import retrofit.http.Path;
 import rx.Observable;
 
 public interface GitHubService {
-    @GET("/orgs/{org}/repos")
+    @GET("/users/{user}/repos")
     @Headers("User-Agent: DaggerDemo")
-    Observable<List<Repository>> listRepos(@Path("org") String org);
+    Observable<List<Repository>> listRepos(@Path("user") String user);
 }

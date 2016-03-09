@@ -30,7 +30,7 @@ public class RepositoriesListActivity extends ListActivity {
     }
 
     private void loadData() {
-        github.listRepos("FutureProcessing")
+        github.listRepos("phajduk")
               .subscribeOn(Schedulers.io())
               .observeOn(AndroidSchedulers.mainThread())
               .subscribe(new Action1<List<Repository>>() {

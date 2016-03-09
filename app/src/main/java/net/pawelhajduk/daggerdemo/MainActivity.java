@@ -14,21 +14,21 @@ import net.pawelhajduk.daggerdemo.data.prefs.BooleanPreference;
 
 import javax.inject.Inject;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnCheckedChanged;
 import butterknife.OnClick;
 
 public class MainActivity extends ActionBarActivity {
-    @InjectView(R.id.main_tv_text)
+    @Bind(R.id.main_tv_text)
     TextView text;
+
+    @Bind(R.id.main_checkbox)
+    CheckBox checkBox;
 
     @Inject
     @UseMockBackend
     BooleanPreference useMock;
-
-    @InjectView(R.id.main_checkbox)
-    CheckBox checkBox;
 
     @Inject
     Resources resources;
@@ -40,7 +40,7 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         DaggerDemoApplication.component().inject(this);
 
         text.setText(resources.getString(R.string.injected_text));
