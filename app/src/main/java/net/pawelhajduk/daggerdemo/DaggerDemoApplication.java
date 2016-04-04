@@ -1,8 +1,8 @@
 package net.pawelhajduk.daggerdemo;
 
-import android.app.Application;
+import android.support.multidex.MultiDexApplication;
 
-public class DaggerDemoApplication extends Application {
+public class DaggerDemoApplication extends MultiDexApplication {
     private static DaggerDemoGraph graph;
     private static DaggerDemoApplication instance;
 

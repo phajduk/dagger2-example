@@ -7,7 +7,7 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
     }
 }
 
@@ -20,14 +20,15 @@ android {
             storePassword 'release'
         }
     }
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
     defaultConfig {
         applicationId "net.pawelhajduk.daggerdemo"
         minSdkVersion 15
-        targetSdkVersion 22
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -46,10 +47,11 @@ android {
 
 dependencies {
     provided 'javax.annotation:jsr250-api:1.0'
-    compile 'com.google.dagger:dagger-compiler:2.0.2'
-    compile 'com.google.dagger:dagger:2.0.2'
+    apt 'com.google.dagger:dagger-compiler:2.1'
+    compile 'com.google.dagger:dagger:2.1'
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:multidex:1.0.1'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.squareup.retrofit:retrofit:1.9.0'
     compile 'com.squareup.retrofit:retrofit-mock:1.9.0'
